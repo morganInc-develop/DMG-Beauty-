@@ -1,0 +1,579 @@
+{
+  "title": "Agence social media — Agence Foudre",
+  "url": "https://www.agencefoudre.com/",
+  "viewport": {
+    "width": 1440,
+    "height": 1400
+  },
+  "pageHeight": 35888,
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Agence social média",
+      "className": "tx-pxl -clrgray"
+    },
+    {
+      "tag": "h2",
+      "text": "Nous électrisons vos réseaux,",
+      "className": "tx-lg"
+    },
+    {
+      "tag": "h2",
+      "text": "NOUS LES RENDONS, SOCIAUX",
+      "className": "tx-lg"
+    },
+    {
+      "tag": "h3",
+      "text": "Yelloh! Village",
+      "className": "m-projectCard_title tx-md tx-center"
+    },
+    {
+      "tag": "h3",
+      "text": "Solty Hôtel",
+      "className": "m-projectCard_title tx-md tx-center"
+    },
+    {
+      "tag": "h3",
+      "text": "Le Sac du Berger",
+      "className": "m-projectCard_title tx-md tx-center"
+    },
+    {
+      "tag": "h3",
+      "text": "Mamy Grand",
+      "className": "m-projectCard_title tx-md tx-center"
+    },
+    {
+      "tag": "h3",
+      "text": "Plus de projets ?",
+      "className": "tx-lg -clrwhite tx-balance tx-center"
+    },
+    {
+      "tag": "h2",
+      "text": "Raisonner pour mieux: résonner.",
+      "className": "tx-lg tx-balance"
+    },
+    {
+      "tag": "h3",
+      "text": "Stratégie social media",
+      "className": "tx-sm tx-balance"
+    },
+    {
+      "tag": "h3",
+      "text": "Création de contenu",
+      "className": "tx-sm tx-balance"
+    },
+    {
+      "tag": "h3",
+      "text": "Community management",
+      "className": "tx-sm tx-balance"
+    },
+    {
+      "tag": "h2",
+      "text": "Nous préfèrerons cet ordre. Toujours.",
+      "className": "tx-lg tx-balance"
+    },
+    {
+      "tag": "h3",
+      "text": "Stratégie",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h3",
+      "text": "Direction artistique",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h3",
+      "text": "Création de contenu",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h3",
+      "text": "Community management",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h3",
+      "text": "Reporting & learnings",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h2",
+      "text": "POURQUOICHOISIRFOUDRE",
+      "className": "-clrpink-3 tx-xxl tx-center"
+    },
+    {
+      "tag": "h3",
+      "text": "Experts social media",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h3",
+      "text": "Premium & sur-mesure",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h3",
+      "text": "Une méthode",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h3",
+      "text": "L’humain avant tout",
+      "className": "tx-sm"
+    },
+    {
+      "tag": "h2",
+      "text": "Petites questions, grandes réponses",
+      "className": "tx-lg"
+    },
+    {
+      "tag": "h2",
+      "text": "Racontez-nous.",
+      "className": "tx-md tx-balance lg-mb-xsm"
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "tag": "div",
+      "className": "o-homeHero row js-hero -active -once",
+      "id": "hero",
+      "dataAttributes": {
+        "data-color": "white",
+        "data-label": " ",
+        "data-module-home-hero": "homeHero",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,HomeHero",
+        "data-scroll-call-self": "",
+        "data-scroll-css-progress": "",
+        "data-scroll-offset": "0%,50%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 1,
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "Agence social média",
+          "className": "tx-pxl -clrgray"
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "index": 1,
+      "tag": "div",
+      "className": "o-homeAgency row is-inview",
+      "id": "agence",
+      "dataAttributes": {
+        "data-color": "pink-1",
+        "data-label": " ",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,Website,website",
+        "data-scroll-offset": "25%,50%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 0,
+      "headings": [],
+      "buttons": [
+        {
+          "tag": "button",
+          "text": "Play",
+          "className": "m-videoPlayer_button -playToggle"
+        },
+        {
+          "tag": "button",
+          "text": "Toggle Mute",
+          "className": "m-videoPlayer_button -muteToggle"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag": "div",
+      "className": "o-homeTeam row -clrpink-1",
+      "id": "",
+      "dataAttributes": {
+        "data-color": "white",
+        "data-label": "Agence",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,Website,website",
+        "data-scroll-offset": "50%,50%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 1,
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Nous électrisons vos réseaux,",
+          "className": "tx-lg"
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "button",
+          "text": "⚡ M a r g a u x 📷",
+          "className": "a-pin"
+        },
+        {
+          "tag": "button",
+          "text": "🛴 M a t h i e u 💻",
+          "className": "a-pin"
+        },
+        {
+          "tag": "button",
+          "text": "⚡ F l o r e n t 🎥",
+          "className": "a-pin"
+        },
+        {
+          "tag": "button",
+          "text": "🎧 J o h a n e 🌈",
+          "className": "a-pin"
+        },
+        {
+          "tag": "button",
+          "text": "🎧 L o u 🍪",
+          "className": "a-pin"
+        },
+        {
+          "tag": "button",
+          "text": "Fermer",
+          "className": "m-teamPopin_closeButton -bgwhite -clrgreen"
+        },
+        {
+          "tag": "button",
+          "text": "Précédent",
+          "className": "m-teamPopin_prevButton"
+        },
+        {
+          "tag": "button",
+          "text": "Suivant",
+          "className": "m-teamPopin_nextButton"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag": "div",
+      "className": "o-homeProjects row",
+      "id": "",
+      "dataAttributes": {
+        "data-color": "#2885ba",
+        "data-hide-featured": "",
+        "data-invert": "true",
+        "data-label": "Projets",
+        "data-module-home-projects": "projects",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,HomeProjects,projects",
+        "data-scroll-module-progress": "",
+        "data-scroll-offset": "50%,100%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 6,
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "NOUS LES RENDONS, SOCIAUX",
+          "className": "tx-lg"
+        },
+        {
+          "tag": "h3",
+          "text": "Yelloh! Village",
+          "className": "m-projectCard_title tx-md tx-center"
+        },
+        {
+          "tag": "h3",
+          "text": "Solty Hôtel",
+          "className": "m-projectCard_title tx-md tx-center"
+        },
+        {
+          "tag": "h3",
+          "text": "Le Sac du Berger",
+          "className": "m-projectCard_title tx-md tx-center"
+        },
+        {
+          "tag": "h3",
+          "text": "Mamy Grand",
+          "className": "m-projectCard_title tx-md tx-center"
+        },
+        {
+          "tag": "h3",
+          "text": "Plus de projets ?",
+          "className": "tx-lg -clrwhite tx-balance tx-center"
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "button",
+          "text": "",
+          "className": "o-homeProjects_thumbnail -active"
+        },
+        {
+          "tag": "button",
+          "text": "",
+          "className": "o-homeProjects_thumbnail"
+        },
+        {
+          "tag": "button",
+          "text": "",
+          "className": "o-homeProjects_thumbnail"
+        },
+        {
+          "tag": "button",
+          "text": "",
+          "className": "o-homeProjects_thumbnail"
+        },
+        {
+          "tag": "button",
+          "text": "Aller à la slide 1",
+          "className": "m-dots_dot"
+        },
+        {
+          "tag": "button",
+          "text": "Aller à la slide 2",
+          "className": "m-dots_dot -active"
+        },
+        {
+          "tag": "button",
+          "text": "Aller à la slide 3",
+          "className": "m-dots_dot"
+        },
+        {
+          "tag": "button",
+          "text": "Précédent",
+          "className": "m-projectCard_navButton -prev"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag": "div",
+      "className": "o-homeManifest",
+      "id": "",
+      "dataAttributes": {
+        "data-hide-featured": "",
+        "data-module-home-manifest": "manifest",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,HomeManifest",
+        "data-scroll-call-self": "",
+        "data-scroll-module-progress": "",
+        "data-scroll-offset": "50%,100%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 0,
+      "headings": [],
+      "buttons": []
+    },
+    {
+      "index": 5,
+      "tag": "div",
+      "className": "o-homeExpertises row -clrpink-1",
+      "id": "expertises",
+      "dataAttributes": {
+        "data-color": "gray",
+        "data-label": "Expertises",
+        "data-module-home-expertises": "homeExpertises",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,Website,website",
+        "data-scroll-module-progress": "",
+        "data-scroll-offset": "50%,50%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 4,
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Raisonner pour mieux: résonner.",
+          "className": "tx-lg tx-balance"
+        },
+        {
+          "tag": "h3",
+          "text": "Stratégie social media",
+          "className": "tx-sm tx-balance"
+        },
+        {
+          "tag": "h3",
+          "text": "Création de contenu",
+          "className": "tx-sm tx-balance"
+        },
+        {
+          "tag": "h3",
+          "text": "Community management",
+          "className": "tx-sm tx-balance"
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "index": 6,
+      "tag": "div",
+      "className": "o-homeProcess row -clrpink-1",
+      "id": "",
+      "dataAttributes": {
+        "data-color": "pink-3",
+        "data-label": "Méthodo & process",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,Website,website",
+        "data-scroll-offset": "50%,50%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 6,
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Nous préfèrerons cet ordre. Toujours.",
+          "className": "tx-lg tx-balance"
+        },
+        {
+          "tag": "h3",
+          "text": "Stratégie",
+          "className": "tx-sm"
+        },
+        {
+          "tag": "h3",
+          "text": "Direction artistique",
+          "className": "tx-sm"
+        },
+        {
+          "tag": "h3",
+          "text": "Création de contenu",
+          "className": "tx-sm"
+        },
+        {
+          "tag": "h3",
+          "text": "Community management",
+          "className": "tx-sm"
+        },
+        {
+          "tag": "h3",
+          "text": "Reporting & learnings",
+          "className": "tx-sm"
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "index": 7,
+      "tag": "div",
+      "className": "o-homeWhy",
+      "id": "",
+      "dataAttributes": {
+        "data-color": "pink-1",
+        "data-label": " ",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,Website,website",
+        "data-scroll-offset": "50%,50%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 5,
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "POURQUOICHOISIRFOUDRE",
+          "className": "-clrpink-3 tx-xxl tx-center"
+        },
+        {
+          "tag": "h3",
+          "text": "Experts social media",
+          "className": "tx-sm"
+        },
+        {
+          "tag": "h3",
+          "text": "Premium & sur-mesure",
+          "className": "tx-sm"
+        },
+        {
+          "tag": "h3",
+          "text": "Une méthode",
+          "className": "tx-sm"
+        },
+        {
+          "tag": "h3",
+          "text": "L’humain avant tout",
+          "className": "tx-sm"
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "index": 8,
+      "tag": "div",
+      "className": "o-homeFaq row -clrpink-1",
+      "id": "faq",
+      "dataAttributes": {
+        "data-color": "white",
+        "data-label": "FAQ",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,Website,website",
+        "data-scroll-offset": "50%,50%",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 1,
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Petites questions, grandes réponses",
+          "className": "tx-lg"
+        }
+      ],
+      "buttons": []
+    },
+    {
+      "index": 9,
+      "tag": "div",
+      "className": "m-homeLabel",
+      "id": "",
+      "dataAttributes": {
+        "data-website": "homeLabel",
+        "data-step": " "
+      },
+      "headingCount": 0,
+      "headings": [],
+      "buttons": []
+    },
+    {
+      "index": 10,
+      "tag": "footer",
+      "className": "o-footer row -clrgreen -once",
+      "id": "contact",
+      "dataAttributes": {
+        "data-color": "pink-2",
+        "data-hide-featured": "",
+        "data-label": " ",
+        "data-module-footer": "footer",
+        "data-scroll": "",
+        "data-scroll-call": "onSectionIntersect,Footer",
+        "data-scroll-call-self": "",
+        "data-scroll-offset": "50%,0",
+        "data-scroll-repeat": ""
+      },
+      "headingCount": 1,
+      "headings": [
+        {
+          "tag": "h2",
+          "text": "Racontez-nous.",
+          "className": "tx-md tx-balance lg-mb-xsm"
+        }
+      ],
+      "buttons": [
+        {
+          "tag": "button",
+          "text": "Lancer le quiz",
+          "className": "a-button -quaternary -clrwhite -bgpink-2 br-md tx-l tx-700 -md"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag": "div",
+      "className": "m-featuredProject -clrwhite",
+      "id": "",
+      "dataAttributes": {
+        "data-module-featured-project": "featured"
+      },
+      "headingCount": 0,
+      "headings": [],
+      "buttons": []
+    }
+  ]
+}
