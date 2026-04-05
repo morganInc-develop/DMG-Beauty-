@@ -1,0 +1,124 @@
+- generic [active] [ref=e1]:
+    - button "Open menu" [ref=e3] [cursor=pointer]:
+        - img [ref=e5]
+    - link "View cart" [ref=e11] [cursor=pointer]:
+        - /url: /cart
+        - img [ref=e12]
+        - generic: "3"
+    - main [ref=e16]:
+        - generic [ref=e17]:
+            - generic:
+                - generic: DMG
+            - generic [ref=e18]:
+                - generic [ref=e20]:
+                    - generic [ref=e21]:
+                        - img "DMG Beauty bonnet editorial" [ref=e22]
+                        - generic:
+                            - paragraph: Hair care essential
+                            - paragraph: SILK BONNET
+                            - link "Shop now" [ref=e24] [cursor=pointer]:
+                                - /url: /shop/bonnets/rose-satin
+                    - generic [ref=e25]:
+                        - img [ref=e28]
+                        - generic:
+                            - paragraph: Soft structure
+                            - paragraph: CLOUD HOODIE
+                            - link "Shop now" [ref=e31] [cursor=pointer]:
+                                - /url: /shop/clothes/cream-ribbed
+                    - generic [ref=e32]:
+                        - img "DMG Beauty accessories editorial" [ref=e33]
+                        - generic:
+                            - paragraph: Finish the look
+                            - paragraph: SATIN SCARF
+                            - link "Shop now" [ref=e35] [cursor=pointer]:
+                                - /url: /shop/accessories/gold-hoops
+                - generic [ref=e36]:
+                    - paragraph [ref=e37]: Bonnets · Clothes · Accessories
+                    - generic [ref=e38]:
+                        - paragraph [ref=e39]: WEAR
+                        - paragraph [ref=e40]: YOUR
+                        - paragraph [ref=e41]: STORY
+        - generic [ref=e43]:
+            - generic [ref=e45]:
+                - generic [ref=e46]: Brand story
+                - heading "YOUR STORY" [level=2] [ref=e47]
+            - generic [ref=e49]:
+                - img "DMG Beauty satin bonnet" [ref=e52]
+                - img "DMG Beauty clothing image" [ref=e55]
+            - generic [ref=e57]:
+                - text: Every great look begins with you.
+                - paragraph [ref=e58]: "DMG Beauty starts with the person wearing it. The goal is never just coverage or care in isolation. It is the full picture: texture, confidence, silhouette, and the feeling that the piece belongs in the look from the first second."
+                - generic [ref=e59]:
+                    - generic [ref=e60]:
+                        - generic [ref=e61]: +
+                        - paragraph [ref=e62]: Styled for real routines, not one-time moments.
+                    - generic [ref=e63]:
+                        - generic [ref=e64]: +
+                        - paragraph [ref=e65]: Soft structure and finish-first details.
+                    - generic [ref=e66]:
+                        - generic [ref=e67]: +
+                        - paragraph [ref=e68]: Built to move from protection into polish.
+                - link "Shop now" [ref=e70] [cursor=pointer]:
+                    - /url: /shop
+        - generic [ref=e72]:
+            - generic [ref=e73]:
+                - generic [ref=e74]: Support
+                - heading "FREQUENTLY ASKED QUESTIONS" [level=2] [ref=e75]
+            - generic [ref=e76]:
+                - generic [ref=e77]:
+                    - paragraph [ref=e79]: "01"
+                    - heading "How long does shipping take?" [level=3] [ref=e81]
+                    - paragraph [ref=e83]: Orders are processed within 1–2 business days and typically arrive within 3–5 business days. Expedited shipping options are available at checkout.
+                - generic [ref=e84]:
+                    - paragraph [ref=e86]: "02"
+                    - heading "What is your return policy?" [level=3] [ref=e88]
+                    - paragraph [ref=e90]: We accept returns within 30 days of delivery. Items must be unused and in their original packaging. Simply contact us to start your return.
+                - generic [ref=e91]:
+                    - paragraph [ref=e93]: "03"
+                    - heading "How do I track my order?" [level=3] [ref=e95]
+                    - paragraph [ref=e97]: Once your order ships, you'll receive a confirmation email with a tracking number. You can use it to follow your package every step of the way.
+                - generic [ref=e98]:
+                    - paragraph [ref=e100]: "04"
+                    - heading "What payment methods do you accept?" [level=3] [ref=e102]
+                    - paragraph [ref=e104]: We accept all major credit and debit cards, PayPal, Apple Pay, and Google Pay. All transactions are secured and encrypted.
+                - generic [ref=e105]:
+                    - paragraph [ref=e107]: "05"
+                    - heading "How do I contact customer support?" [level=3] [ref=e109]
+                    - paragraph [ref=e111]: Our team is available via email and WhatsApp. We aim to respond to all inquiries within 24 hours on business days.
+        - generic [ref=e112]:
+            - generic [ref=e113]: Footer
+            - generic [ref=e116]:
+                - img "DMG Beauty lookbook portrait" [ref=e118]
+                - generic [ref=e119]:
+                    - generic [ref=e120]: New arrivals every season.
+                    - heading "JOIN THE WAITLIST." [level=2] [ref=e121]
+                    - paragraph [ref=e122]: Be first to know about the next drop, restocks, and limited releases.
+                    - generic [ref=e123]:
+                        - textbox "Email address" [ref=e124]
+                        - button "Sign up →" [ref=e125]
+            - heading "DMG" [level=2] [ref=e127]
+            - generic [ref=e128]:
+                - generic [ref=e129]:
+                    - generic [ref=e130]: © 2026 DMG Beauty. All rights reserved.
+                    - generic [ref=e131]:
+                        - link "Instagram" [ref=e132] [cursor=pointer]:
+                            - /url: https://instagram.com/dmgbeauty
+                            - img [ref=e133]
+                        - link "TikTok" [ref=e135] [cursor=pointer]:
+                            - /url: https://tiktok.com/@dmgbeauty
+                            - img [ref=e136]
+                        - link "Pinterest" [ref=e138] [cursor=pointer]:
+                            - /url: https://pinterest.com/dmgbeauty
+                            - img [ref=e139]
+                        - link "LinkedIn" [ref=e141] [cursor=pointer]:
+                            - /url: https://linkedin.com/company/dmgbeauty
+                            - img [ref=e142]
+                - generic [ref=e144]:
+                    - link "Privacy Policy" [ref=e145] [cursor=pointer]:
+                        - /url: /privacy
+                    - link "Terms & Conditions" [ref=e146] [cursor=pointer]:
+                        - /url: /terms
+                    - link "Shipping Policy" [ref=e147] [cursor=pointer]:
+                        - /url: /shipping
+    - button "Open Next.js Dev Tools" [ref=e153] [cursor=pointer]:
+        - img [ref=e154]

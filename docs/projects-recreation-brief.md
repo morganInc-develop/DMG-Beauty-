@@ -73,15 +73,19 @@ Motion guidance:
 ## Screenshot References
 
 ### Desktop full
+
 ![Desktop full](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/projects/desktop-full.png)
 
 ### Desktop mid
+
 ![Desktop mid](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/projects/desktop-mid.png)
 
 ### Mobile full
+
 ![Mobile full](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/projects/mobile-full.png)
 
 ### Mobile hero
+
 ![Mobile hero](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/projects/mobile-hero.png)
 
 ## High-Level Design Read

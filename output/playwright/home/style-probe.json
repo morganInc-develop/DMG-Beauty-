@@ -70,8 +70,5 @@
     "textTransform": "none"
   },
   "sections": [],
-  "fonts": [
-    "Clash Grotesk",
-    "Beni"
-  ]
+  "fonts": ["Clash Grotesk", "Beni"]
 }

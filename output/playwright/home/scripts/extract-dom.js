@@ -10,7 +10,7 @@
     sectionNodes.length > 0
       ? sectionNodes
       : [...document.querySelectorAll("main > *, body > main > *")].filter(
-          (el) => el.children.length || text(el)
+          (el) => el.children.length || text(el),
         );
 
   const sections = fallbackSections.map((el, index) => ({
@@ -51,4 +51,4 @@
   };
 
   return JSON.stringify(payload, null, 2);
-}
+};

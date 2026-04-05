@@ -66,18 +66,23 @@ Implementation warning:
 ## Screenshot References
 
 ### Desktop full
+
 ![Desktop full](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/home/desktop-full.png)
 
 ### Desktop hero
+
 ![Desktop hero](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/home/desktop-hero.png)
 
 ### Desktop footer
+
 ![Desktop footer](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/home/desktop-footer.png)
 
 ### Mobile full
+
 ![Mobile full](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/home/mobile-full.png)
 
 ### Mobile hero
+
 ![Mobile hero](/Users/damionmorgan/Documents/GottabeAway/DMG-Beauty-/output/playwright/home/mobile-hero.png)
 
 ## High-Level Design Read

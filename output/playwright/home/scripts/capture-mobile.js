@@ -20,4 +20,4 @@ async (page) => {
   await page.screenshot({ path: `${base}/mobile-mid.png` });
 
   return "mobile capture complete";
-}
+};

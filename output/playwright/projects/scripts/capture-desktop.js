@@ -27,4 +27,4 @@ async (page) => {
   await page.screenshot({ path: `${base}/desktop-footer.png` });
 
   return "desktop capture complete";
-}
+};

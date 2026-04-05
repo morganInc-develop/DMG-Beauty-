@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Generic Website Design Research Prompt</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.45;
+        color: #111;
+        margin: 48px;
+        max-width: 900px;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+        margin-top: 28px;
+        margin-bottom: 12px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+      p,
+      li {
+        font-size: 12px;
+      }
+      pre {
+        white-space: pre-wrap;
+        font-family: Menlo, Consolas, monospace;
+        font-size: 10px;
+        line-height: 1.35;
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        padding: 16px;
+        border-radius: 8px;
+      }
+      code {
+        font-family: Menlo, Consolas, monospace;
+      }
+      .meta {
+        color: #555;
+        margin-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Generic Website Design Research Prompt</h1>
+    <p class="meta">
+      Reusable prompt for analyzing a webpage and producing a high-fidelity
+      reconstruction brief for any site.
+    </p>
+
+    <h2>How To Use</h2>
+    <ul>
+      <li>Replace the bracketed placeholders before use.</li>
+      <li>
+        Use one target page per run unless you explicitly want cross-page
+        comparison.
+      </li>
+      <li>
+        Pair this prompt with a browser automation workflow so the analysis is
+        based on real rendered output.
+      </li>
+    </ul>
+
+    <h2>Prompt</h2>
+    <pre>
+Analyze the page at [PAGE_URL] and create a high-fidelity recreation brief for rebuilding it in [TECH_STACK].
+
+This is not a generic design summary task. It is a structured website design research task. I want a research-backed implementation brief based on real page inspection, rendered HTML, computed styles, screenshots, and source-backed interaction analysis.
+
+Your role:
+You are a design research and frontend reconstruction specialist. Your job is to study one specific live webpage, extract the visual system and interaction model, and produce a detailed markdown brief that another developer or AI system could use to recreate the page with high fidelity.
+
+Primary goal:
+Produce a detailed recreation brief for one page of an existing website so it can be rebuilt faithfully in a modern frontend stack such as Next.js + Tailwind CSS v4 + selective shadcn/ui + GSAP + Framer Motion.
+
+Important constraints:
+- Analyze only the requested target page unless cross-page comparison is explicitly necessary.
+- Do not give me a shallow summary.
+- Do not rely only on screenshots.
+- Do not rely only on source code.
+- Use both rendered observation and source-backed inspection.
+- Distinguish clearly between observed facts and inferred implementation guidance.
+- Do not flatten bespoke sections into generic cards or templates unless the source clearly does that.
+- Do not invent libraries, motion systems, or layout behavior without evidence.
+- Cite the artifacts created during the process.
+
+Context variables:
+- SITE_NAME: [SITE_NAME]
+- PAGE_URL: [PAGE_URL]
+- PAGE_SLUG: [PAGE_SLUG]
+- SESSION_NAME: [SESSION_NAME]
+- OUTPUT_DIR: [OUTPUT_DIR]
+- TECH_STACK: [TECH_STACK]
+- APP_STRUCTURE: [APP_STRUCTURE]
+- ANIMATION_LIBRARIES: [ANIMATION_LIBRARIES]
+- UI_LIBRARY_POLICY: [UI_LIBRARY_POLICY]
+- BREAKPOINT_STRATEGY: [BREAKPOINT_STRATEGY]
+- IMAGE_HANDLING_STRATEGY: [IMAGE_HANDLING_STRATEGY]
+
+Expected deliverables:
+Create a complete analysis package with these artifacts:
+- rendered HTML snapshot
+- desktop full-page screenshot
+- desktop sectional screenshots
+- mobile full-page screenshot
+- mobile sectional screenshots
+- DOM/content extraction JSON
+- desktop style probe JSON
+- mobile style probe JSON
+- final markdown recreation brief
+
+Recommended output structure:
+[OUTPUT_DIR]/
+  source.html
+  desktop-full.png
+  desktop-hero.png
+  desktop-mid.png
+  desktop-lower.png
+  desktop-footer.png
+  mobile-full.png
+  mobile-hero.png
+  mobile-mid.png
+  dom-desktop.json
+  style-probe.json
+  style-probe-mobile.json
+  site.bundle.js
+  [PAGE_SLUG]-recreation-brief.md
+
+Research workflow:
+Follow this workflow in order.
+
+Step 1: Define the target clearly
+Before doing any browser work, establish:
+- the exact page URL
+- the page purpose
+- whether this is a homepage, listing page, service page, landing page, product page, article page, or something else
+- the likely reconstruction target stack
+- the artifact output location
+
+Step 2: Open and inspect the live page
+Use browser automation to load the page in a stable session.
+- Wait for the initial page to finish loading.
+- Identify whether there is an intro animation, loader, modal, cookie banner, age gate, location selector, or consent layer.
+- If a gate blocks the page, clear it in the least invasive way possible and continue.
+- Note whether the page appears to use page-load animation, delayed content reveal, lazy media loading, or route-transition effects.
+
+Step 3: Capture rendered source
+Save the fully rendered HTML after the page has settled.
+This saved HTML is one of the main evidence sources for:
+- wrapper and section class names
+- data attributes
+- module names
+- heading hierarchy
+- buttons and calls to action
+- lazy-loading patterns
+- embedded media patterns
+- likely animation hooks
+
+Step 4: Capture desktop screenshots
+Capture:
+- full page at desktop width
+- hero/intro section
+- mid-page section
+- lower-page section
+- footer or closing section
+
+Desktop screenshots should be useful for:
+- layout study
+- spacing
+- background transitions
+- image treatment
+- section rhythm
+- card or module structure
+- motion inference from composition
+
+Step 5: Capture mobile screenshots
+Capture:
+- full page at mobile width
+- mobile top/hero
+- mobile mid-page
+- additional mobile section captures if needed
+
+Mobile screenshots should be used to identify:
+- what truly changes vs what only stacks
+- whether a sticky side layout becomes a carousel, accordion, collapsed list, or tall stack
+- what content is hidden, reordered, condensed, or reframed
+- whether controls change position, size, or interaction style
+- whether typography scale changes proportionally or is substantially redesigned
+
+Step 6: Extract DOM structure
+Generate structured DOM extraction data that includes:
+- page title
+- URL
+- viewport size
+- page height
+- all h1/h2/h3 content
+- top-level sections or main content blocks
+- ids, class names, and data attributes
+- per-section headings
+- section-local buttons or CTAs
+
+Use this to identify:
+- section order
+- repeated content modules
+- component families
+- likely page-specific modules
+- likely sitewide/shared modules
+
+Step 7: Extract computed style probes
+Capture computed styles for representative selectors, ideally:
+- body
+- primary h1
+- first h2
+- representative button
+- representative nav link
+- representative section wrappers
+- loaded fonts
+
+Style probes should include:
+- font family
+- font size
+- font weight
+- line height
+- letter spacing
+- text color
+- background color
+- border radius
+- text transform
+- other useful structural values if relevant
+
+Step 8: Inspect source for motion and architecture clues
+Search the rendered HTML and any loaded bundle references for:
+- GSAP
+- ScrollTrigger
+- SplitText
+- Lenis
+- Barba
+- anime.js
+- Framer Motion
+- Swiper
+- Embla
+- locomotive-scroll
+- data-scroll
+- data-module
+- data- attributes tied to sections or interactions
+- sticky title systems
+- slider systems
+- popins/modals
+- accordion behavior
+- like/share/favorite interactions
+- filter/sort behavior
+- story/progress systems
+- autoplay media behavior
+
+Also look for:
+- route transitions
+- section intersection hooks
+- rAF loops
+- IntersectionObserver usage
+- autoplay progression systems
+- preload behavior
+- lazy-loading strategies
+- pinned elements
+- progress bars
+- active-state or current-state markers
+
+Step 9: Perform the visual analysis
+Using screenshots plus source evidence, answer:
+- What is the dominant design idea of the page?
+- What is the page trying to feel like?
+- What are the strongest visual anchors?
+- What is the hierarchy of attention?
+- How is the page paced from top to bottom?
+- Which sections are information-dense vs mood-setting?
+- Where does the design rely on custom art direction rather than reusable UI?
+- Where does the design rely on typography more than imagery?
+- Where does the design rely on imagery more than copy?
+- Which background color transitions define the page rhythm?
+- Which layout moves are essential and should not be simplified?
+- What changes significantly on mobile beyond stacking?
+
+Step 10: Produce the final markdown brief
+Write a complete, well-structured markdown brief that another developer or AI system could use to recreate the page faithfully.
+
+Required output sections:
+Your final markdown brief must include all of the following sections.
+
+# [SITE_NAME] [PAGE_NAME] Recreation Brief
+
+Source URL:
+Capture date:
+Tech target:
+
+## 1. Artifact Index
+List every generated artifact with a clear label and file path.
+
+## 2. Master Recreation Prompt
+Write a page-specific implementation prompt that a builder could paste into a new AI task.
+
+## 3. Screenshot References
+Embed or reference the key screenshots and explain what each one is useful for.
+
+## 4. High-Level Design Read
+Describe the overall visual and experiential concept of the page.
+This section should explain:
+- the page’s mood
+- the visual hierarchy
+- how attention is controlled
+- whether the page is editorial, utility-focused, product-driven, campaign-like, minimalist, maximalist, etc.
+- what makes the page feel distinctive
+
+## 5. Source-Backed Design Tokens
+Document the likely design system as observed from source and screenshots:
+- primary colors
+- secondary colors
+- background palette
+- typography families
+- display scale
+- body scale
+- spacing behavior
+- border radius behavior
+- container/gutter logic
+- image treatment patterns
+- button treatment patterns
+- tag/badge/chip treatment patterns if present
+
+Be explicit about what is observed and what is inferred.
+
+## 6. Page Inventory
+List the page’s main content modules or sections in order.
+For each section or module, identify:
+- name
+- likely purpose
+- whether it appears shared or page-specific
+- key classes or module hooks if useful
+
+## 7. Section-by-Section Breakdown
+For every major section, document:
+- purpose
+- content model
+- desktop layout model
+- mobile layout model
+- visual hierarchy
+- typography use
+- color use
+- image/media use
+- CTA placement
+- notable custom behavior
+- what must not be simplified in reconstruction
+
+## 8. Animation and Interaction Breakdown
+Document all meaningful motion and interaction patterns:
+- loader behavior
+- intro animation
+- sticky behavior
+- reveal behavior
+- scroll-linked movement
+- parallax
+- progress indicators
+- sliders/carousels/stories systems
+- accordions
+- tabs
+- hover states
+- active states
+- dialogs/popins
+- media playback behavior
+- navigation behavior
+- page transition behavior if evident
+
+Also specify:
+- which motion should be owned by GSAP
+- which motion could be handled by Framer Motion
+- which interactions are structural and must not be treated as decoration
+
+## 9. Implementation Notes for [TECH_STACK]
+Translate the findings into frontend build guidance.
+This section should explain:
+- recommended component boundaries
+- what should be reusable
+- what should be bespoke
+- where layout primitives are safe
+- where custom CSS is necessary
+- how to handle image crops and art direction
+- how to preserve typographic scale and line breaks
+- how to preserve responsive behavior without flattening the experience
+
+## 10. [UI_LIBRARY_NAME] Guidance
+Explain where a UI library is appropriate and where it is not.
+For example:
+- dialog primitives may be fine
+- accordion primitives may be acceptable if fully reskinned
+- generic cards, carousels, tabs, badges, and default buttons may be inappropriate if the original design is bespoke
+
+## 11. Tailwind v4 Global CSS Starter
+Provide a starter token block and base utility strategy derived from the page.
+This should be a starting point, not random defaults.
+Include:
+- color variables
+- font variables
+- radius variables
+- easing variables
+- any useful layout helper classes
+- representative display/body typography helpers
+
+## 12. Build Checklist
+Provide a final implementation checklist that a developer can use during reconstruction.
+
+Analysis standards:
+The brief must clearly separate:
+- Observed: directly visible in screenshots or clearly present in source artifacts
+- Inferred: likely implementation guidance based on evidence
+
+If you infer something:
+- say that it is inferred
+- explain why the inference is reasonable
+
+Do not:
+- invent sections not present on the page
+- assume a design system broader than the evidence supports
+- overgeneralize one page into the entire site
+- recommend generic UI substitutions where the design is bespoke
+- ignore responsive differences
+- ignore motion if the page clearly uses it
+
+Quality bar:
+- high specificity
+- evidence-driven conclusions
+- clear distinction between facts and guidance
+- useful to both humans and AI systems
+- detailed enough that a frontend engineer could start implementation from the brief
+- structured enough to be reused on any website page by swapping the URL and context variables
+
+Final instruction:
+Do the full research workflow, create the artifacts, and then write the final markdown recreation brief. Do not stop at analysis notes. Deliver the artifacts plus the final structured brief.</pre
+    >
+  </body>
+</html>

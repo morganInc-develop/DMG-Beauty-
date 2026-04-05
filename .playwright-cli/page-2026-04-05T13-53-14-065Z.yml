@@ -1,0 +1,192 @@
+- generic [active] [ref=e1]:
+    - generic [ref=e2]:
+        - generic:
+            - generic [ref=e3]:
+                - button "Open menu" [ref=e4] [cursor=pointer]:
+                    - img [ref=e6]
+                - generic: "*"
+            - generic [ref=e10]:
+                - link "View cart" [ref=e12] [cursor=pointer]:
+                    - /url: /cart
+                    - img [ref=e13]
+                    - generic [ref=e207]: "3"
+                - generic: "*"
+        - main [ref=e17]:
+            - generic [ref=e18]:
+                - link "DMG Beauty edit" [ref=e19] [cursor=pointer]:
+                    - /url: /
+                    - generic [ref=e20]: DMG
+                    - generic [ref=e21]: Beauty edit
+                - generic [ref=e22]:
+                    - generic:
+                        - img
+                    - searchbox [ref=e23]
+                - generic [ref=e24]:
+                    - link "Brand" [ref=e25] [cursor=pointer]:
+                        - /url: /about
+                        - img [ref=e26]
+                    - link "Cart (3)" [ref=e28] [cursor=pointer]:
+                        - /url: /cart
+                        - generic [ref=e29]:
+                            - img [ref=e30]
+                            - generic [ref=e34]: "3"
+                    - generic [ref=e35]: US
+            - generic [ref=e37]:
+                - generic [ref=e38]:
+                    - generic [ref=e39]: DMG Spring Edit
+                    - heading "Shop the soft-glam drop with our signature attitude." [level=1] [ref=e40]
+                    - paragraph [ref=e41]: Satin protection, sculpted layers, and statement details styled in the DMG palette instead of a generic storefront.
+                    - generic [ref=e42]:
+                        - link "Shop featured" [ref=e43] [cursor=pointer]:
+                            - /url: /shop/bonnets/rose-satin
+                        - generic [ref=e44]: 5 pieces in view
+                - generic [ref=e45]:
+                    - generic [ref=e46]:
+                        - img "Smoke Black" [ref=e48]
+                        - generic [ref=e49]:
+                            - paragraph [ref=e50]: Smoke Black
+                            - paragraph [ref=e51]: Bonnets
+                    - generic [ref=e52]:
+                        - img "Rose Satin" [ref=e54]
+                        - generic [ref=e55]:
+                            - paragraph [ref=e56]: Rose Satin
+                            - paragraph [ref=e57]: Bonnets
+            - generic [ref=e58]:
+                - complementary [ref=e59]:
+                    - generic [ref=e60]:
+                        - generic [ref=e61]:
+                            - paragraph [ref=e62]: Browse
+                            - link "Reset" [ref=e63] [cursor=pointer]:
+                                - /url: /shop
+                        - generic [ref=e64]:
+                            - button "All products Everything in the drop Rose Satin" [ref=e65]:
+                                - generic [ref=e66]:
+                                    - paragraph [ref=e67]: All products
+                                    - paragraph [ref=e68]: Everything in the drop
+                                - img "Rose Satin" [ref=e70]
+                            - button "Bonnets Shop this lane Rose Satin" [ref=e71]:
+                                - generic [ref=e72]:
+                                    - paragraph [ref=e73]: Bonnets
+                                    - paragraph [ref=e74]: Shop this lane
+                                - img "Rose Satin" [ref=e76]
+                            - button "Clothes Shop this lane Cream Ribbed" [ref=e77]:
+                                - generic [ref=e78]:
+                                    - paragraph [ref=e79]: Clothes
+                                    - paragraph [ref=e80]: Shop this lane
+                                - img "Cream Ribbed" [ref=e82]
+                            - button "Accessories Shop this lane Gold Hoop Set" [ref=e83]:
+                                - generic [ref=e84]:
+                                    - paragraph [ref=e85]: Accessories
+                                    - paragraph [ref=e86]: Shop this lane
+                                - img "Gold Hoop Set" [ref=e88]
+                - generic [ref=e89]:
+                    - generic [ref=e90]:
+                        - generic [ref=e91]:
+                            - paragraph [ref=e92]: Curated storefront
+                            - heading "Shop All" [level=2] [ref=e93]
+                            - paragraph [ref=e94]: Clean filters, stronger hierarchy, and product cards that feel merch-driven instead of editorial-only.
+                        - generic [ref=e95]:
+                            - button "All pieces" [ref=e96]
+                            - button "New arrival" [ref=e97]
+                            - button "Bestsellers" [ref=e98]
+                            - button "Limited" [ref=e99]
+                            - button "Under $30" [ref=e100]
+                    - generic [ref=e101]:
+                        - article [ref=e102]:
+                            - link "Rose Satin Bonnets" [ref=e103] [cursor=pointer]:
+                                - /url: /shop/bonnets/rose-satin
+                                - generic [ref=e104]:
+                                    - img "Rose Satin" [ref=e105]
+                                    - generic [ref=e106]: Bonnets
+                            - generic [ref=e107]:
+                                - generic [ref=e108]:
+                                    - generic [ref=e109]:
+                                        - heading "Rose Satin" [level=3] [ref=e110]
+                                        - paragraph [ref=e111]: $28
+                                    - link "View Rose Satin" [ref=e112] [cursor=pointer]:
+                                        - /url: /shop/bonnets/rose-satin
+                                        - img [ref=e113]
+                                - paragraph [ref=e116]: Our bestselling satin bonnet in dusty rose. Fully lined, adjustable band, curl-protective.
+                                - generic [ref=e117]:
+                                    - generic [ref=e118]: Bonnet
+                                    - generic [ref=e119]: Satin-lined
+                                    - generic [ref=e120]: New arrival
+                        - article [ref=e121]:
+                            - link "Smoke Black Bonnets" [ref=e122] [cursor=pointer]:
+                                - /url: /shop/bonnets/smoke-black
+                                - generic [ref=e123]:
+                                    - img "Smoke Black" [ref=e124]
+                                    - generic [ref=e125]: Bonnets
+                            - generic [ref=e126]:
+                                - generic [ref=e127]:
+                                    - generic [ref=e128]:
+                                        - heading "Smoke Black" [level=3] [ref=e129]
+                                        - paragraph [ref=e130]: $28
+                                    - link "View Smoke Black" [ref=e131] [cursor=pointer]:
+                                        - /url: /shop/bonnets/smoke-black
+                                        - img [ref=e132]
+                                - paragraph [ref=e135]: A deep charcoal bonnet with a matte finish. Limited run, styled for everyday protection.
+                                - generic [ref=e136]:
+                                    - generic [ref=e137]: Bonnet
+                                    - generic [ref=e138]: Satin-lined
+                                    - generic [ref=e139]: Limited
+                        - article [ref=e140]:
+                            - link "Cream Ribbed Clothes" [ref=e141] [cursor=pointer]:
+                                - /url: /shop/clothes/cream-ribbed
+                                - generic [ref=e142]:
+                                    - img "Cream Ribbed" [ref=e143]
+                                    - generic [ref=e144]: Clothes
+                            - generic [ref=e145]:
+                                - generic [ref=e146]:
+                                    - generic [ref=e147]:
+                                        - heading "Cream Ribbed" [level=3] [ref=e148]
+                                        - paragraph [ref=e149]: $42
+                                    - link "View Cream Ribbed" [ref=e150] [cursor=pointer]:
+                                        - /url: /shop/clothes/cream-ribbed
+                                        - img [ref=e151]
+                                - paragraph [ref=e154]: A heavyweight ribbed crop top in warm cream. Stretchy, breathable, and made to last.
+                                - generic [ref=e155]:
+                                    - generic [ref=e156]: Top
+                                    - generic [ref=e157]: XS – 4X
+                                    - generic [ref=e158]: Bestseller
+                        - article [ref=e159]:
+                            - link "Black Joggers Clothes" [ref=e160] [cursor=pointer]:
+                                - /url: /shop/clothes/black-joggers
+                                - generic [ref=e161]:
+                                    - img "Black Joggers" [ref=e162]
+                                    - generic [ref=e163]: Clothes
+                            - generic [ref=e164]:
+                                - generic [ref=e165]:
+                                    - generic [ref=e166]:
+                                        - heading "Black Joggers" [level=3] [ref=e167]
+                                        - paragraph [ref=e168]: $58
+                                    - link "View Black Joggers" [ref=e169] [cursor=pointer]:
+                                        - /url: /shop/clothes/black-joggers
+                                        - img [ref=e170]
+                                - paragraph [ref=e173]: High-waist joggers with a tapered fit. Soft French terry that matches everything.
+                                - generic [ref=e174]:
+                                    - generic [ref=e175]: Bottoms
+                                    - generic [ref=e176]: XS – 4X
+                                    - generic [ref=e177]: Fan favorite
+                        - article [ref=e178]:
+                            - link "Gold Hoop Set Accessories" [ref=e179] [cursor=pointer]:
+                                - /url: /shop/accessories/gold-hoops
+                                - generic [ref=e180]:
+                                    - img "Gold Hoop Set" [ref=e181]
+                                    - generic [ref=e182]: Accessories
+                            - generic [ref=e183]:
+                                - generic [ref=e184]:
+                                    - generic [ref=e185]:
+                                        - heading "Gold Hoop Set" [level=3] [ref=e186]
+                                        - paragraph [ref=e187]: $18
+                                    - link "View Gold Hoop Set" [ref=e188] [cursor=pointer]:
+                                        - /url: /shop/accessories/gold-hoops
+                                        - img [ref=e189]
+                                - paragraph [ref=e192]: Three sizes, one vibe. Gold-plated stainless steel with a finish that keeps shining.
+                                - generic [ref=e193]:
+                                    - generic [ref=e194]: Earrings
+                                    - generic [ref=e195]: Set of 3
+                                    - generic [ref=e196]: Gold-plated
+    - button "Open Next.js Dev Tools" [ref=e202] [cursor=pointer]:
+        - img [ref=e203]
+    - alert [ref=e206]
