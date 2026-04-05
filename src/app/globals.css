@@ -83,9 +83,6 @@ body {
   background-color: var(--color-foudre-paper);
   color: var(--color-foudre-green);
   overflow-x: hidden;
-  padding-top: calc(
-    var(--mobile-floating-controls-offset) + env(safe-area-inset-top)
-  );
 }
 
 main {
@@ -119,10 +116,6 @@ img {
 }
 
 @media (min-width: 961px) {
-  body {
-    padding-top: 0;
-  }
-
   .grid-24 {
     padding-inline: 3rem;
   }
