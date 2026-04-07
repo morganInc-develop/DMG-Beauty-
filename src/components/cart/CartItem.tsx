@@ -23,24 +23,29 @@ export default function CartItem({ item }: { item: CartItemType }) {
         transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
         className="cart-item flex items-start gap-5 border-t border-foudre-green/15 py-8 desk:gap-8"
       >
-        <div className="relative aspect-[3/4] w-[9rem] shrink-0 overflow-hidden rounded-[var(--radius-md)] desk:w-[12rem]">
+        <div className="relative aspect-[3/4] w-[7.2rem] shrink-0 overflow-hidden rounded-[var(--radius-md)] desk:w-[12rem]">
           <Image src={item.img} fill className="object-cover" alt={item.name} />
         </div>
 
-        <div className="flex flex-1 flex-col gap-3">
-          <span className="chip-bubble self-start">{item.category}</span>
+        <div className="flex flex-1 flex-col gap-2 desk:gap-3">
+          <span className="chip-bubble self-start py-[0.5rem] text-[1rem] desk:py-[0.8rem] desk:text-[1.2rem]">
+            {item.category}
+          </span>
 
-          <h3 className="tx-md whitespace-pre-line leading-[0.85] text-foudre-green">
+          <h3
+            className="whitespace-pre-line leading-[0.88] text-foudre-green"
+            style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
+          >
             {item.name}
           </h3>
 
           <p className="tx-p text-foudre-green/55">{item.variant}</p>
 
-          <div className="mt-2 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
+          <div className="mt-1 flex flex-wrap items-center justify-between gap-3 desk:mt-2 desk:gap-4">
+            <div className="flex items-center gap-2 desk:gap-3">
               <motion.button
                 type="button"
-                className="btn-circle h-[3.6rem] w-[3.6rem] border border-foudre-green/20 bg-foudre-paper text-[2rem] font-light text-foudre-green"
+                className="btn-circle h-[3rem] w-[3rem] border border-foudre-green/20 bg-foudre-paper text-[1.8rem] font-light text-foudre-green desk:h-[3.6rem] desk:w-[3.6rem] desk:text-[2rem]"
                 whileHover={{
                   scale: 1.08,
                   backgroundColor: "var(--color-foudre-green)",
@@ -61,7 +66,7 @@ export default function CartItem({ item }: { item: CartItemType }) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.2 }}
-                  className="tx-sm w-[3rem] text-center text-foudre-green"
+                  className="w-[2.4rem] text-center text-[2rem] font-bold text-foudre-green desk:w-[3rem] desk:text-[3.2rem]"
                 >
                   {item.quantity}
                 </motion.span>
@@ -69,7 +74,7 @@ export default function CartItem({ item }: { item: CartItemType }) {
 
               <motion.button
                 type="button"
-                className="btn-circle h-[3.6rem] w-[3.6rem] bg-foudre-green text-[2rem] font-light text-foudre-paper"
+                className="btn-circle h-[3rem] w-[3rem] bg-foudre-green text-[1.8rem] font-light text-foudre-paper desk:h-[3.6rem] desk:w-[3.6rem] desk:text-[2rem]"
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.92 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
@@ -80,7 +85,7 @@ export default function CartItem({ item }: { item: CartItemType }) {
               </motion.button>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 desk:gap-4">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={item.price * item.quantity}
@@ -88,7 +93,7 @@ export default function CartItem({ item }: { item: CartItemType }) {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.25 }}
-                  className="tx-sm text-foudre-green"
+                  className="text-[2rem] font-bold text-foudre-green desk:text-[3.2rem]"
                 >
                   {formatPrice(item.price * item.quantity)}
                 </motion.span>
@@ -96,7 +101,7 @@ export default function CartItem({ item }: { item: CartItemType }) {
 
               <motion.button
                 type="button"
-                className="rounded-full border border-foudre-green/20 bg-transparent px-4 py-2 tx-l font-bold text-foudre-green/50"
+                className="rounded-full border border-foudre-green/20 bg-transparent px-3 py-1.5 text-[1.1rem] font-bold text-foudre-green/50 desk:px-4 desk:py-2 desk:text-[1.2rem]"
                 whileHover={{
                   scale: 1.08,
                   borderColor: "var(--color-foudre-pink)",

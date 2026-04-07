@@ -3,6 +3,7 @@
 import { startTransition, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 import HomeFooter from "@/components/home/HomeFooter";
 import FloatingControls from "@/components/persistent/FloatingControls";
@@ -25,10 +26,12 @@ const filterOptions = [
 
 type CategoryKey = (typeof categoryOptions)[number]["key"];
 type FilterKey = (typeof filterOptions)[number]["key"];
+type ViewMode = "grid" | "list";
 
 export default function ShopPage() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryKey>("all");
   const [selectedFilter, setSelectedFilter] = useState<FilterKey>("all");
+  const [view, setView] = useState<ViewMode>("grid");
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
@@ -69,6 +72,7 @@ export default function ShopPage() {
     selectedCategory === "all" ? "Shop All" : selectedCategory;
   const featuredProduct = filteredProducts[0] ?? products[0];
   const supportingProduct = filteredProducts[1] ?? products[1];
+  const thirdProduct = filteredProducts[2] ?? products[2];
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-foudre-blush pb-12 pt-[11.2rem] desk:pt-[11rem]">
@@ -105,7 +109,8 @@ export default function ShopPage() {
                 <div className="mt-7 flex flex-wrap items-center gap-3">
                   <Link
                     href={featuredProduct.href}
-                    className="inline-flex items-center rounded-full bg-foudre-green px-7 py-4 text-[1.3rem] font-bold uppercase tracking-[0.18em] text-foudre-paper transition-transform hover:-translate-y-[0.1rem]"
+                    className="inline-flex items-center rounded-full bg-foudre-green px-7 py-4 text-[1.3rem] font-bold uppercase tracking-[0.18em] transition-transform hover:-translate-y-[0.1rem]"
+                    style={{ color: "var(--color-foudre-paper)" }}
                   >
                     Shop featured
                   </Link>
@@ -115,14 +120,18 @@ export default function ShopPage() {
                 </div>
               </div>
 
-              <div className="relative min-h-[22rem]">
+              <div className="relative min-h-[28rem]">
                 <PromoImageCard
                   product={supportingProduct}
-                  className="left-0 top-8 rotate-[-8deg] desk:left-2"
+                  className="left-0 top-10 rotate-[-8deg]"
+                />
+                <PromoImageCard
+                  product={thirdProduct}
+                  className="left-1/2 top-2 z-10 -translate-x-1/2 rotate-[-3deg]"
                 />
                 <PromoImageCard
                   product={featuredProduct}
-                  className="right-0 top-0 rotate-[7deg] desk:right-8"
+                  className="right-0 top-0 rotate-[7deg]"
                   priority
                 />
               </div>
@@ -226,7 +235,7 @@ export default function ShopPage() {
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   {filterOptions.map((filter) => {
                     const isActive = selectedFilter === filter.key;
 
@@ -249,75 +258,60 @@ export default function ShopPage() {
                       </button>
                     );
                   })}
+
+                  {/* View toggle */}
+                  <div className="ml-1 flex items-center gap-1 rounded-full border border-foudre-green/10 bg-foudre-paper p-1">
+                    <button
+                      type="button"
+                      aria-label="Grid view"
+                      onClick={() => setView("grid")}
+                      className={`flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full transition ${
+                        view === "grid"
+                          ? "bg-foudre-green text-foudre-paper shadow-sm"
+                          : "text-foudre-green/45 hover:text-foudre-green"
+                      }`}
+                    >
+                      <GridIcon />
+                    </button>
+                    <button
+                      type="button"
+                      aria-label="List view"
+                      onClick={() => setView("list")}
+                      className={`flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full transition ${
+                        view === "list"
+                          ? "bg-foudre-green text-foudre-paper shadow-sm"
+                          : "text-foudre-green/45 hover:text-foudre-green"
+                      }`}
+                    >
+                      <ListIcon />
+                    </button>
+                  </div>
                 </div>
               </div>
 
               {filteredProducts.length > 0 ? (
-                <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                  {filteredProducts.map((product) => (
-                    <article
-                      key={product.id}
-                      className="overflow-hidden rounded-[3rem] border border-foudre-green/8 bg-white shadow-[0_2rem_5rem_rgba(61,43,0,0.08)]"
-                    >
-                      <Link href={product.href} className="block">
-                        <div
-                          className="relative aspect-[4/5] overflow-hidden"
-                          style={{
-                            background: `linear-gradient(180deg, ${product.bg}24 0%, ${product.accentBg}75 100%)`,
-                          }}
-                        >
-                          <Image
-                            src={product.stories[0]}
-                            alt={product.name}
-                            fill
-                            sizes="(min-width: 1280px) 22vw, (min-width: 768px) 40vw, 92vw"
-                            className="object-cover object-center transition-transform duration-500 hover:scale-[1.03]"
-                          />
-
-                          <div className="absolute left-4 top-4 rounded-full bg-foudre-paper/90 px-4 py-2 text-[1.1rem] font-semibold uppercase tracking-[0.16em] text-foudre-green">
-                            {product.category}
-                          </div>
-                        </div>
-                      </Link>
-
-                      <div className="space-y-4 p-5">
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <h3 className="font-display text-[2.8rem] leading-[0.9] text-foudre-green">
-                              {product.name}
-                            </h3>
-                            <p className="mt-2 text-[1.3rem] font-semibold text-foudre-green/55">
-                              {product.price}
-                            </p>
-                          </div>
-
-                          <Link
-                            href={product.href}
-                            className="inline-flex h-[4.2rem] w-[4.2rem] shrink-0 items-center justify-center rounded-full border border-foudre-green/10 text-foudre-green transition hover:border-foudre-pink hover:bg-foudre-pink hover:text-foudre-paper"
-                            aria-label={`View ${product.name}`}
-                          >
-                            <ArrowIcon />
-                          </Link>
-                        </div>
-
-                        <p className="tx-p min-h-[5.8rem] text-foudre-green/65">
-                          {product.excerpt}
-                        </p>
-
-                        <div className="flex flex-wrap gap-2">
-                          {product.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="rounded-full bg-foudre-cream px-3 py-2 text-[1.1rem] font-semibold text-foudre-green/70"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </article>
-                  ))}
-                </div>
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.div
+                    key={view}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.28, ease: [0.23, 1, 0.32, 1] }}
+                    className={`mt-6 grid gap-3 ${
+                      view === "grid"
+                        ? "grid-cols-3 desk:grid-cols-4"
+                        : "grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
+                    }`}
+                  >
+                    {filteredProducts.map((product) =>
+                      view === "grid" ? (
+                        <GridProductCard key={product.id} product={product} />
+                      ) : (
+                        <ListProductCard key={product.id} product={product} />
+                      ),
+                    )}
+                  </motion.div>
+                </AnimatePresence>
               ) : (
                 <div className="mt-6 rounded-[3rem] border border-dashed border-foudre-green/20 bg-foudre-cream/45 px-6 py-16 text-center">
                   <p className="font-display text-[3.6rem] leading-none text-foudre-green">
@@ -334,6 +328,144 @@ export default function ShopPage() {
       </main>
       <HomeFooter />
     </div>
+  );
+}
+
+/* ── Compact grid card (3-col on mobile) ── */
+function GridProductCard({ product }: { product: (typeof products)[number] }) {
+  return (
+    <article className="overflow-hidden rounded-[2rem] border border-foudre-green/8 bg-white shadow-[0_0.8rem_2.4rem_rgba(61,43,0,0.07)]">
+      <Link href={product.href} className="block">
+        <div
+          className="relative aspect-[3/4] overflow-hidden"
+          style={{
+            background: `linear-gradient(180deg, ${product.bg}24 0%, ${product.accentBg}75 100%)`,
+          }}
+        >
+          <Image
+            src={product.stories[0]}
+            alt={product.name}
+            fill
+            sizes="(min-width: 961px) 22vw, 33vw"
+            className="object-cover object-center transition-transform duration-500 hover:scale-[1.04]"
+          />
+          <div className="absolute left-2 top-2 rounded-full bg-foudre-paper/88 px-2 py-1 text-[0.9rem] font-semibold uppercase tracking-[0.12em] text-foudre-green">
+            {product.category}
+          </div>
+        </div>
+      </Link>
+      <div className="px-3 pb-3 pt-2">
+        <h3 className="font-display text-[1.6rem] leading-none text-foudre-green desk:text-[2.2rem]">
+          {product.name}
+        </h3>
+        <div className="mt-1 flex items-center justify-between gap-1">
+          <p className="text-[1.1rem] font-semibold text-foudre-green/55">
+            {product.price}
+          </p>
+          <Link
+            href={product.href}
+            className="inline-flex h-[2.8rem] w-[2.8rem] shrink-0 items-center justify-center rounded-full bg-foudre-cream text-foudre-green transition hover:bg-foudre-pink hover:text-foudre-paper"
+            aria-label={`View ${product.name}`}
+          >
+            <ArrowIcon small />
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+/* ── Full list card (single column on mobile) ── */
+function ListProductCard({ product }: { product: (typeof products)[number] }) {
+  return (
+    <article className="overflow-hidden rounded-[3rem] border border-foudre-green/8 bg-white shadow-[0_2rem_5rem_rgba(61,43,0,0.08)]">
+      <Link href={product.href} className="block">
+        <div
+          className="relative aspect-[4/5] overflow-hidden"
+          style={{
+            background: `linear-gradient(180deg, ${product.bg}24 0%, ${product.accentBg}75 100%)`,
+          }}
+        >
+          <Image
+            src={product.stories[0]}
+            alt={product.name}
+            fill
+            sizes="(min-width: 1280px) 22vw, (min-width: 768px) 40vw, 92vw"
+            className="object-cover object-center transition-transform duration-500 hover:scale-[1.03]"
+          />
+          <div className="absolute left-4 top-4 rounded-full bg-foudre-paper/90 px-4 py-2 text-[1.1rem] font-semibold uppercase tracking-[0.16em] text-foudre-green">
+            {product.category}
+          </div>
+        </div>
+      </Link>
+      <div className="space-y-4 p-5">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h3 className="font-display text-[2.8rem] leading-[0.9] text-foudre-green">
+              {product.name}
+            </h3>
+            <p className="mt-2 text-[1.3rem] font-semibold text-foudre-green/55">
+              {product.price}
+            </p>
+          </div>
+          <Link
+            href={product.href}
+            className="inline-flex h-[4.2rem] w-[4.2rem] shrink-0 items-center justify-center rounded-full border border-foudre-green/10 text-foudre-green transition hover:border-foudre-pink hover:bg-foudre-pink hover:text-foudre-paper"
+            aria-label={`View ${product.name}`}
+          >
+            <ArrowIcon />
+          </Link>
+        </div>
+        <p className="tx-p min-h-[5.8rem] text-foudre-green/65">
+          {product.excerpt}
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {product.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-foudre-cream px-3 py-2 text-[1.1rem] font-semibold text-foudre-green/70"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+/* ── View toggle icons ── */
+function GridIcon() {
+  return (
+    <svg
+      viewBox="0 0 18 18"
+      fill="currentColor"
+      aria-hidden
+      className="h-[1.6rem] w-[1.6rem]"
+    >
+      <rect x="1" y="1" width="6" height="6" rx="1.2" />
+      <rect x="11" y="1" width="6" height="6" rx="1.2" />
+      <rect x="1" y="11" width="6" height="6" rx="1.2" />
+      <rect x="11" y="11" width="6" height="6" rx="1.2" />
+    </svg>
+  );
+}
+
+function ListIcon() {
+  return (
+    <svg
+      viewBox="0 0 18 18"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      aria-hidden
+      className="h-[1.6rem] w-[1.6rem]"
+    >
+      <line x1="1" y1="4.5" x2="17" y2="4.5" />
+      <line x1="1" y1="9" x2="17" y2="9" />
+      <line x1="1" y1="13.5" x2="17" y2="13.5" />
+    </svg>
   );
 }
 
@@ -372,7 +504,8 @@ function PromoImageCard({
   );
 }
 
-function ArrowIcon() {
+function ArrowIcon({ small = false }: { small?: boolean }) {
+  const size = small ? "h-[1.4rem] w-[1.4rem]" : "h-[1.8rem] w-[1.8rem]";
   return (
     <svg
       viewBox="0 0 24 24"
@@ -380,7 +513,7 @@ function ArrowIcon() {
       stroke="currentColor"
       strokeWidth="1.8"
       aria-hidden="true"
-      className="h-[1.8rem] w-[1.8rem]"
+      className={size}
     >
       <path d="M7 17 17 7" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M8 7h9v9" strokeLinecap="round" strokeLinejoin="round" />
