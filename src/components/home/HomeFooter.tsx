@@ -138,6 +138,15 @@ export default function HomeFooter() {
           <span className="tx-l text-foudre-green/60">
             © {new Date().getFullYear()} DMG Beauty. All rights reserved.
           </span>
+          <a
+            href="https://www.morgandev.studio"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Site by MorganDev Studio"
+            className="tx-l inline-flex items-center rounded-lg border border-foudre-green/20 px-3 py-1.5 font-semibold text-foudre-green transition-colors hover:border-foudre-green hover:bg-foudre-green/5"
+          >
+            Site by MorganDev Studio
+          </a>
           <div className="flex items-center gap-3">
             {[
               {
