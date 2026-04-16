@@ -8,43 +8,43 @@ import { gsap, useGSAP } from "@/lib/gsap";
 
 const PHASES = [
   {
-    label: "ROOTED\nIN CHRIST.",
-    desc: "Faith first.\nStyle follows.",
-    eyebrow: "Daily witness",
-    cta: "Shop the collection",
-    href: "/shop",
-    src: "https://picsum.photos/seed/dmg-brand-a/700/940",
-    alt: "DMG Christian apparel campaign portrait",
+    label: "SATIN FOR\nYOUR CROWN.",
+    desc: "Care first.\nStyle still matters.",
+    eyebrow: "Butterfly Cross Bonnet",
+    cta: "Shop bonnets",
+    href: "/shop/bonnets/butterfly-cross-bonnet",
+    src: "/images/bonnet1.jpeg",
+    alt: "DMG butterfly cross bonnet",
     textColor: "#fff8f6",
   },
   {
-    label: "BORN FROM\nOLD HARBOUR.",
-    desc: "Jamaican roots.\nSteady and resilient.",
-    eyebrow: "Old Harbour, Jamaica",
-    cta: "Our roots",
-    href: "/shop",
-    src: "https://picsum.photos/seed/dmg-brand-b/700/940",
-    alt: "DMG portrait inspired by Old Harbour, Jamaica",
+    label: "P.U.S.H.\nON PURPOSE.",
+    desc: "Pray Until Something Happens.\nWear the reminder.",
+    eyebrow: "Signature tee",
+    cta: "Shop the tee",
+    href: "/shop/clothes/push-signature-tee",
+    src: "/images/tshirt.jpeg",
+    alt: "DMG P.U.S.H tee",
     textColor: "#3d2b00",
   },
   {
-    label: "WORN IN\nFORT LAUDERDALE.",
-    desc: "South Florida ease.\nEveryday confidence.",
-    eyebrow: "Fort Lauderdale, Florida",
-    cta: "See the edit",
-    href: "/shop",
-    src: "https://picsum.photos/seed/dmg-brand-c/700/940",
-    alt: "DMG editorial image for a Fort Lauderdale clothing brand",
+    label: "LAYERED FOR\nREAL LIFE.",
+    desc: "The hoodie keeps the message close\nwhen the weather shifts.",
+    eyebrow: "Faith hoodie",
+    cta: "Shop the hoodie",
+    href: "/shop/clothes/faith-graphic-hoodie",
+    src: "/images/hoodie.jpg",
+    alt: "DMG faith graphic hoodie",
     textColor: "#3d2b00",
   },
   {
-    label: "MADE TO\nREPRESENT.",
-    desc: "Clean enough for every day.\nBold enough to mean something.",
-    eyebrow: "Purpose in every piece",
-    cta: "Wear it well",
-    href: "/shop",
-    src: "https://picsum.photos/seed/dmg-brand-d/700/940",
-    alt: "DMG campaign image focused on purpose-driven apparel",
+    label: "SMALL PIECES.\nBIG REMINDER.",
+    desc: "Even the accessories\nstill say something.",
+    eyebrow: "Heart keychain",
+    cta: "Shop accessories",
+    href: "/shop/accessories/push-heart-keychain",
+    src: "/images/keychain.JPG",
+    alt: "DMG P.U.S.H heart keychain",
     textColor: "#db3c8a",
   },
 ];
@@ -131,7 +131,7 @@ export default function HomeBrand() {
             {/* Invisible spacer sized to the tallest two-line heading */}
             <div className="invisible pointer-events-none" aria-hidden>
               <p className="tx-xl whitespace-pre-line">
-                {"WORN IN\nFORT LAUDERDALE."}
+                {"LAYERED FOR\nREAL LIFE."}
               </p>
             </div>
 

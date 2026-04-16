@@ -1,21 +1,13 @@
-import FloatingControls from "@/components/persistent/FloatingControls";
+import CategoryLanding from "@/components/shop/CategoryLanding";
+import { products } from "@/data/products";
 
 export default function BonnetsPage() {
   return (
-    <div className="min-h-screen bg-foudre-paper">
-      <FloatingControls />
-      <div className="grid-24 pt-[12rem]">
-        <div className="col-span-24">
-          <h1 className="tx-xl text-foudre-green">
-            COMING
-            <br />
-            SOON.
-          </h1>
-          <p className="tx-p mt-4 text-foudre-green/60">
-            This collection is being prepared. Check back shortly.
-          </p>
-        </div>
-      </div>
-    </div>
+    <CategoryLanding
+      eyebrow="Bonnets"
+      title="Satin care with a stronger point of view."
+      description="The bonnet line is built around one core product with multiple style options, so customers can browse the looks they want without treating each colorway like a separate item."
+      products={products.filter((product) => product.category === "Bonnets")}
+    />
   );
 }

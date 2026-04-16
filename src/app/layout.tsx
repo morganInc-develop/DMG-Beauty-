@@ -26,13 +26,15 @@ export const metadata: Metadata = {
     template: "%s | DMG",
   },
   description:
-    "Christian apparel rooted in faith, shaped by Old Harbour, Jamaica, and worn in Fort Lauderdale, Florida.",
+    "Christian apparel and accessories rooted in faith, shaped by Old Harbour, Jamaica, and worn in Fort Lauderdale, Florida.",
   keywords: [
     "DMG",
     "Christian apparel",
     "Fort Lauderdale clothing brand",
     "Old Harbour Jamaica",
     "faith-based fashion",
+    "P.U.S.H tee",
+    "Christian bonnet",
   ],
 };
 

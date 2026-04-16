@@ -63,55 +63,55 @@ function ChevronRightIcon() {
 
 const heroCards: HeroCard[] = [
   {
-    title: "SATIN BONNET",
-    eyebrow: "Rooted routine",
-    href: "/shop/bonnets/rose-satin",
-    imageSrc: "https://picsum.photos/seed/dmg-hero-left/600/800",
-    alt: "DMG satin bonnet editorial for a Christian apparel campaign",
+    title: "BUTTERFLY BONNET",
+    eyebrow: "Satin care",
+    href: "/shop/bonnets/butterfly-cross-bonnet",
+    imageSrc: "/images/bonnet1.jpeg",
+    alt: "DMG butterfly cross bonnet with blush ties",
   },
   {
-    title: "CLOUD HOODIE",
-    eyebrow: "Faith in motion",
-    href: "/shop/clothes/cream-ribbed",
-    videoSrc: "/videos/hero-loop.mp4",
-    poster: "https://picsum.photos/seed/dmg-hero-center-poster/800/1000",
-    alt: "DMG hoodie editorial for a Fort Lauderdale Christian clothing brand",
+    title: "P.U.S.H TEE",
+    eyebrow: "Statement apparel",
+    href: "/shop/clothes/push-signature-tee",
+    videoSrc: "/videos/push-tee.mp4",
+    poster: "/images/book-poster.jpg",
+    alt: "DMG P.U.S.H signature tee",
     showBolt: true,
   },
   {
-    title: "SATIN SCARF",
-    eyebrow: "Finish with purpose",
-    href: "/shop/accessories/gold-hoops",
-    imageSrc: "https://picsum.photos/seed/dmg-hero-right/600/800",
-    alt: "DMG satin scarf editorial inspired by Old Harbour roots",
+    title: "PUSH TRUCKER",
+    eyebrow: "Everyday reminder",
+    href: "/shop/accessories/push-trucker-hat",
+    imageSrc: "/images/hat.JPG",
+    alt: "DMG PUSH trucker hat laid with the matching shirt",
   },
 ];
 
 const carouselSlides = [
   {
-    src: "/images/shop/rose-satin-2.jpg",
-    alt: "Rose satin bonnet",
-    label: "Satin Bonnet",
+    src: "/images/bonnet.JPG",
+    alt: "Butterfly cross bonnet color options",
+    label: "Butterfly Bonnet",
   },
   {
-    src: "/images/shop/cream-ribbed-2.jpg",
-    alt: "Cream ribbed set",
-    label: "Ribbed Set",
+    src: "/images/hat.JPG",
+    alt: "PUSH trucker hat",
+    label: "PUSH Trucker Hat",
   },
   {
-    src: "/images/shop/gold-hoops-2.jpg",
-    alt: "Gold hoops",
-    label: "Gold Hoops",
+    src: "/images/hoodie.jpg",
+    alt: "Faith graphic hoodie",
+    label: "Faith Hoodie",
   },
   {
-    src: "/images/shop/black-joggers-2.jpg",
-    alt: "Black joggers",
-    label: "Joggers",
+    src: "/images/keychain.JPG",
+    alt: "P.U.S.H heart keychain",
+    label: "P.U.S.H Keychain",
   },
   {
-    src: "/images/shop/smoke-black-2.jpg",
-    alt: "Smoke black bonnet",
-    label: "Smoke Bonnet",
+    src: "/images/tshirt.jpeg",
+    alt: "P.U.S.H signature tee",
+    label: "P.U.S.H Tee",
   },
 ];
 
@@ -326,10 +326,10 @@ export default function HomeHero() {
           </div>
         </div>
 
-        {/* ── "WEAR YOUR STORY" — single row ── */}
+        {/* ── Collection line ── */}
         <div className="col-span-24 mt-8 desk:mt-10">
           <p className="hero-sub-copy tx-l uppercase tracking-[0.24em] text-foudre-green/38">
-            Fort Lauderdale · Old Harbour · Worn With Purpose
+            Bonnet · Hat · Hoodie · Keychain · Tee
           </p>
           <p
             className="hero-sub-copy mt-4 text-foudre-pink desk:whitespace-nowrap"
@@ -341,7 +341,7 @@ export default function HomeHero() {
               fontSize: "clamp(5rem, 9.2vw, 13rem)",
             }}
           >
-            ROOTED IN FAITH
+            WEAR THE MESSAGE
           </p>
         </div>
 
@@ -358,9 +358,9 @@ export default function HomeHero() {
               lineHeight: 1.35,
             }}
           >
-            Christian apparel with South Florida polish and Old Harbour roots -
+            The current DMG lineup keeps the message clear -
             <br className="hidden desk:block" />
-            made for conviction, comfort, and everyday presence.
+            satin care, PUSH apparel, and reminders you can carry daily.
           </p>
 
           {/* Carousel */}

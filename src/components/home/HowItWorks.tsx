@@ -7,28 +7,28 @@ import { gsap, useGSAP } from "@/lib/gsap";
 const steps = [
   {
     num: "01",
+    title: "Are the bonnet photos different products?",
+    desc: "No. The bonnet imagery is grouped under one bonnet product with multiple style options, so customers can scroll through the looks and choose the version they want.",
+  },
+  {
+    num: "02",
+    title: "What does P.U.S.H mean?",
+    desc: "P.U.S.H stands for Pray Until Something Happens. It is one of the clearest messages in the line and shows up on the tee, keychain, and adjacent product storytelling.",
+  },
+  {
+    num: "03",
+    title: "What products are in the current collection?",
+    desc: "The current lineup centers on the butterfly cross bonnet, the PUSH trucker hat, the faith hoodie, the P.U.S.H heart keychain, and the P.U.S.H signature tee.",
+  },
+  {
+    num: "04",
     title: "Where do orders ship from?",
     desc: "Orders ship from Fort Lauderdale, Florida. We usually process within 1-2 business days, and standard delivery typically lands within 3-5 business days.",
   },
   {
-    num: "02",
-    title: "What does DMG stand for?",
-    desc: "DMG is a Christian apparel brand rooted in faith, shaped by Old Harbour, Jamaica, and expressed through clean, wearable pieces for everyday life.",
-  },
-  {
-    num: "03",
-    title: "How do your drops work?",
-    desc: "We release in focused runs instead of constant churn. Join the list to hear first about new pieces, restocks, and limited capsules before they move.",
-  },
-  {
-    num: "04",
-    title: "Can I return or exchange an order?",
-    desc: "We accept returns within 30 days of delivery on unused items in their original packaging. Contact us and we will help you start the process.",
-  },
-  {
     num: "05",
-    title: "How do I reach the team?",
-    desc: "Email and WhatsApp are the fastest ways to reach us. We aim to respond within 24 hours on business days and keep the conversation personal.",
+    title: "How do I stay updated on restocks and new drops?",
+    desc: "Join the list at the bottom of the page. That is where we will point people to bonnet restocks, new apparel pieces, and giftable accessory drops first.",
   },
 ];
 

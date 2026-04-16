@@ -12,7 +12,7 @@ import { products } from "@/data/products";
 const categoryOptions = [
   { key: "all", label: "All products" },
   { key: "Bonnets", label: "Bonnets" },
-  { key: "Clothes", label: "Clothes" },
+  { key: "Apparel", label: "Apparel" },
   { key: "Accessories", label: "Accessories" },
 ] as const;
 
@@ -20,7 +20,7 @@ const filterOptions = [
   { key: "all", label: "All pieces" },
   { key: "new", label: "New arrival" },
   { key: "bestseller", label: "Bestsellers" },
-  { key: "limited", label: "Limited" },
+  { key: "giftable", label: "Giftable" },
   { key: "under-30", label: "Under $30" },
 ] as const;
 
@@ -55,9 +55,9 @@ export default function ShopPage() {
       });
     }
 
-    if (selectedFilter === "limited") {
+    if (selectedFilter === "giftable") {
       matchesFilter = product.tags.some((tag) =>
-        tag.toLowerCase().includes("limited"),
+        tag.toLowerCase().includes("gift"),
       );
     }
 
@@ -97,14 +97,15 @@ export default function ShopPage() {
             <div className="grid gap-8 desk:grid-cols-[minmax(0,1fr)_44rem] desk:items-center">
               <div className="relative z-10 max-w-[70rem]">
                 <span className="inline-flex rounded-full bg-foudre-paper/70 px-4 py-2 text-[1.1rem] font-semibold uppercase tracking-[0.26em] text-foudre-green/70">
-                  DMG Spring Edit
+                  DMG Current Collection
                 </span>
                 <h1 className="tx-md mt-5 max-w-[72rem] text-foudre-green desk:tx-xl">
-                  Shop the soft-glam drop with our signature attitude.
+                  Shop the products people now know DMG for.
                 </h1>
                 <p className="tx-p mt-5 max-w-[48rem] text-foudre-green/70 desk:text-[1.8rem]">
-                  Satin protection, sculpted layers, and statement details
-                  styled in the DMG palette instead of a generic storefront.
+                  Butterfly bonnets, P.U.S.H apparel, and giftable reminders
+                  built around the real collection instead of placeholder
+                  product names.
                 </p>
                 <div className="mt-7 flex flex-wrap items-center gap-3">
                   <Link
@@ -112,7 +113,7 @@ export default function ShopPage() {
                     className="inline-flex items-center rounded-full bg-foudre-green px-7 py-4 text-[1.3rem] font-bold uppercase tracking-[0.18em] transition-transform hover:-translate-y-[0.1rem]"
                     style={{ color: "var(--color-foudre-paper)" }}
                   >
-                    Shop featured
+                    Shop bestseller
                   </Link>
                   <span className="rounded-full border border-foudre-green/10 bg-foudre-paper/65 px-5 py-4 text-[1.2rem] font-semibold uppercase tracking-[0.18em] text-foudre-green/65">
                     {filteredProducts.length} pieces in view
@@ -224,14 +225,15 @@ export default function ShopPage() {
               <div className="flex flex-col gap-4 desk:flex-row desk:items-end desk:justify-between">
                 <div>
                   <p className="text-[1.1rem] font-semibold uppercase tracking-[0.24em] text-foudre-green/45">
-                    Curated storefront
+                    Current collection
                   </p>
                   <h2 className="mt-2 font-display text-[4.4rem] leading-[0.88] text-foudre-green desk:text-[6rem]">
                     {activeCategoryLabel}
                   </h2>
                   <p className="tx-p mt-3 max-w-[52rem] text-foudre-green/65">
-                    Clean filters, stronger hierarchy, and product cards that
-                    feel merch-driven instead of editorial-only.
+                    Browse the actual lineup by category, price point, and gift
+                    potential without fighting through the old placeholder
+                    catalog.
                   </p>
                 </div>
 
@@ -318,7 +320,7 @@ export default function ShopPage() {
                     No match yet
                   </p>
                   <p className="tx-p mt-3 text-foudre-green/60">
-                    Try a broader search or clear the active filter.
+                    Try another filter or reset the current view.
                   </p>
                 </div>
               )}

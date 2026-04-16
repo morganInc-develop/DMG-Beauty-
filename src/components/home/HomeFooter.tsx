@@ -64,8 +64,8 @@ export default function HomeFooter() {
           <div className="relative mx-auto w-full max-w-[42rem] pb-24">
             <div className="relative aspect-[3/4] overflow-hidden rounded-[var(--radius-md)] shadow-[0_2rem_6rem_rgb(0_0_0_/_0.12)]">
               <Image
-                src="https://picsum.photos/seed/dmg-footer-portrait/700/940"
-                alt="DMG Christian apparel campaign portrait"
+                src="/images/hoodie.jpg"
+                alt="DMG faith hoodie"
                 fill
                 className="object-cover"
                 sizes="(min-width: 961px) 42rem, 100vw"
@@ -82,11 +82,11 @@ export default function HomeFooter() {
                 Fort Lauderdale by way of Old Harbour.
               </span>
               <h2 className="tx-md mt-2 whitespace-pre-line text-foudre-paper">
-                {"WEAR FAITH.\nSTAY ROOTED."}
+                {"STAY READY\nFOR RESTOCKS."}
               </h2>
               <p className="tx-p mt-4 max-w-[28rem] text-foudre-paper/75">
-                Get first word on faith-led releases, everyday essentials, and
-                the story we are building between South Florida and Jamaica.
+                Get first word on bonnet restocks, new P.U.S.H apparel, and the
+                smaller pieces that round out the current collection.
               </p>
               <form
                 className="mt-6 flex flex-col gap-3"

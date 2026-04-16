@@ -14,22 +14,22 @@ export type CartState = {
 
 export const seedCart: CartItem[] = [
   {
-    id: "rose-satin",
-    name: "ROSE\nSATIN",
-    variant: "Bonnet — One size",
-    price: 2800,
+    id: "butterfly-cross-bonnet",
+    name: "BUTTERFLY\nBONNET",
+    variant: "Wrap Style",
+    price: 2200,
     quantity: 1,
-    img: "/images/shop/rose-satin-1.jpg",
+    img: "/images/bonnet1.jpeg",
     category: "Bonnet",
   },
   {
-    id: "cream-ribbed",
-    name: "CREAM\nRIBBED",
-    variant: "Top — Size M",
-    price: 4200,
-    quantity: 2,
-    img: "/images/shop/cream-ribbed-1.jpg",
-    category: "Clothes",
+    id: "push-signature-tee",
+    name: "P.U.S.H\nTEE",
+    variant: "Standard Fit",
+    price: 3500,
+    quantity: 1,
+    img: "/images/tshirt.jpeg",
+    category: "Apparel",
   },
 ];
 

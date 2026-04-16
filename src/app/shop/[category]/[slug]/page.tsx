@@ -1,7 +1,8 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import HomeFooter from "@/components/home/HomeFooter";
 import FloatingControls from "@/components/persistent/FloatingControls";
+import ProductDetail from "@/components/shop/ProductDetail";
 import { products } from "@/data/products";
 
 type ProductPageProps = {
@@ -37,38 +38,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-foudre-paper">
+    <div className="min-h-screen bg-foudre-paper pb-12 pt-[11.2rem] desk:pt-[11rem]">
       <FloatingControls />
 
-      <div className="grid-24 pt-[12rem] pb-[8rem]">
-        <div className="col-span-24 desk:col-span-15">
-          <span className="chip-bubble bg-foudre-pink-soft text-foudre-green">
-            {product.category}
-          </span>
-          <h1 className="tx-xl mt-6 whitespace-pre-line text-foudre-green">
-            {product.nameLines.join("\n")}
-          </h1>
-          <p className="tx-md mt-6 text-foudre-green">{product.price}</p>
-          <p className="tx-p mt-4 max-w-[48rem] text-foudre-green/65">
-            {product.excerpt}
-          </p>
-          <p className="tx-p mt-6 max-w-[44rem] text-foudre-green/60">
-            This product page is being prepared. You can explore the rest of the
-            DMG Beauty collection now and check back shortly for the full edit.
-          </p>
-          <div className="mt-8 flex flex-col gap-4 desk:flex-row">
-            <Link href="/shop" className="pill-cta">
-              Back to shop →
-            </Link>
-            <Link
-              href={`/shop/${category}`}
-              className="tx-p self-center text-foudre-green/60 underline underline-offset-4 hover:text-foudre-green"
-            >
-              View {product.category}
-            </Link>
-          </div>
+      <main className="grid-24 pb-[8rem]">
+        <div className="col-span-24">
+          <ProductDetail product={product} />
         </div>
-      </div>
+      </main>
+
+      <HomeFooter />
     </div>
   );
 }

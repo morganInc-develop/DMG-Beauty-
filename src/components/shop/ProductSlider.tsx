@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
@@ -9,12 +9,16 @@ interface ProductSliderProps {
   images: string[];
   accentBg: string;
   textColor: string;
+  activeIndex?: number;
+  onActiveChange?: (index: number) => void;
 }
 
 export default function ProductSlider({
   images,
   accentBg,
   textColor,
+  activeIndex,
+  onActiveChange,
 }: ProductSliderProps) {
   const sliderRef = useRef<HTMLDivElement>(null);
   const barRefs = useRef<HTMLDivElement[]>([]);
@@ -28,6 +32,7 @@ export default function ProductSlider({
       }
 
       setActive(index);
+      onActiveChange?.(index);
       gsap.set(barRefs.current, { scaleX: 0, transformOrigin: "left center" });
 
       if (index > 0) {
@@ -43,8 +48,19 @@ export default function ProductSlider({
         onComplete: () => runSlide((index + 1) % images.length),
       });
     },
-    [images.length],
+    [images.length, onActiveChange],
   );
+
+  useEffect(() => {
+    if (
+      typeof activeIndex === "number" &&
+      activeIndex >= 0 &&
+      activeIndex < images.length &&
+      activeIndex !== active
+    ) {
+      playSlide(activeIndex);
+    }
+  }, [active, activeIndex, images.length, playSlide]);
 
   useGSAP(
     () => {

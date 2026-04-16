@@ -1,42 +1,21 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
+import { products } from "@/data/products";
 import { gsap, useGSAP } from "@/lib/gsap";
 
 export default function FeaturedProject() {
   const progressRef = useRef<HTMLSpanElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const featuredProducts = [
-    {
-      eyebrow: "Rooted pick",
-      title: "ROSE SATIN\nBONNET",
-      href: "/shop/bonnets/rose-satin",
-      image: "/images/shop/rose-satin-1.jpg",
-      status: "Sold out",
-      bg: "#8b5800",
-    },
-    {
-      eyebrow: "Everyday staple",
-      title: "CREAM RIBBED\nTOP",
-      href: "/shop/clothes/cream-ribbed",
-      image: "/images/shop/cream-ribbed-1.jpg",
-      status: "$42",
-      bg: "#db3c8a",
-    },
-    {
-      eyebrow: "Signature detail",
-      title: "GOLD HOOP\nSET",
-      href: "/shop/accessories/gold-hoops",
-      image: "/images/shop/gold-hoops-1.jpg",
-      status: "Set of 3",
-      bg: "#3d2b00",
-    },
-  ];
+  const featuredProducts = useMemo(
+    () => [products[0], products[4], products[3]],
+    [],
+  );
 
   const activeProduct = featuredProducts[activeIndex];
 
@@ -81,7 +60,7 @@ export default function FeaturedProject() {
       >
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeProduct.title}
+            key={activeProduct.id}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
@@ -89,8 +68,8 @@ export default function FeaturedProject() {
           >
             <div className="relative mb-4 aspect-[2.2/1] overflow-hidden rounded-[var(--radius-md)]">
               <Image
-                src={activeProduct.image}
-                alt={activeProduct.title.replace("\n", " ")}
+                src={activeProduct.stories[0]}
+                alt={activeProduct.name}
                 fill
                 className="object-cover"
                 sizes="(min-width: 961px) 28rem, 22rem"
@@ -98,15 +77,15 @@ export default function FeaturedProject() {
             </div>
 
             <span className="tx-l uppercase tracking-[0.2em] text-white/60">
-              {activeProduct.eyebrow}
+              {activeProduct.category}
             </span>
             <h3 className="tx-sm mt-3 whitespace-pre-line text-white">
-              {activeProduct.title}
+              {activeProduct.nameLines.join("\n")}
             </h3>
 
             <div className="mt-4 flex items-center gap-3">
               <span className="chip-bubble bg-white text-foudre-green">
-                {activeProduct.status}
+                {activeProduct.price}
               </span>
 
               <Link href={activeProduct.href} className="pill-cta w-fit">

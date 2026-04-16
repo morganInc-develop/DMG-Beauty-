@@ -1,21 +1,13 @@
-import FloatingControls from "@/components/persistent/FloatingControls";
+import CategoryLanding from "@/components/shop/CategoryLanding";
+import { products } from "@/data/products";
 
 export default function ClothesPage() {
   return (
-    <div className="min-h-screen bg-foudre-paper">
-      <FloatingControls />
-      <div className="grid-24 pt-[12rem]">
-        <div className="col-span-24">
-          <h1 className="tx-xl text-foudre-green">
-            COMING
-            <br />
-            SOON.
-          </h1>
-          <p className="tx-p mt-4 text-foudre-green/60">
-            This collection is being prepared. Check back shortly.
-          </p>
-        </div>
-      </div>
-    </div>
+    <CategoryLanding
+      eyebrow="Apparel"
+      title="Graphic pieces that carry the message."
+      description="DMG apparel now centers the actual products in the collection: the statement tee and the hoodie, both designed to keep faith language visible in everyday wear."
+      products={products.filter((product) => product.category === "Apparel")}
+    />
   );
 }
