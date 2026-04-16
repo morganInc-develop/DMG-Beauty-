@@ -13,7 +13,7 @@ export default function FeaturedProject() {
 
   const featuredProducts = [
     {
-      eyebrow: "New drop",
+      eyebrow: "Rooted pick",
       title: "ROSE SATIN\nBONNET",
       href: "/shop/bonnets/rose-satin",
       image: "/images/shop/rose-satin-1.jpg",
@@ -21,7 +21,7 @@ export default function FeaturedProject() {
       bg: "#8b5800",
     },
     {
-      eyebrow: "Bestseller",
+      eyebrow: "Everyday staple",
       title: "CREAM RIBBED\nTOP",
       href: "/shop/clothes/cream-ribbed",
       image: "/images/shop/cream-ribbed-1.jpg",
@@ -29,7 +29,7 @@ export default function FeaturedProject() {
       bg: "#db3c8a",
     },
     {
-      eyebrow: "Just added",
+      eyebrow: "Signature detail",
       title: "GOLD HOOP\nSET",
       href: "/shop/accessories/gold-hoops",
       image: "/images/shop/gold-hoops-1.jpg",

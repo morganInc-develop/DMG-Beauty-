@@ -8,43 +8,43 @@ import { gsap, useGSAP } from "@/lib/gsap";
 
 const PHASES = [
   {
-    label: "YOUR\nSTORY",
-    desc: "Every great look\nbegins with you.",
-    eyebrow: "Your journey",
-    cta: "Shop now",
+    label: "ROOTED\nIN CHRIST.",
+    desc: "Faith first.\nStyle follows.",
+    eyebrow: "Daily witness",
+    cta: "Shop the collection",
     href: "/shop",
     src: "https://picsum.photos/seed/dmg-brand-a/700/940",
-    alt: "Your beauty story",
+    alt: "DMG Christian apparel campaign portrait",
     textColor: "#fff8f6",
   },
   {
-    label: "WE MAKE\nTHE LOOKS,",
-    desc: "Crafted with intention,\nbuilt to turn heads.",
-    eyebrow: "New arrivals",
-    cta: "Shop now",
+    label: "BORN FROM\nOLD HARBOUR.",
+    desc: "Jamaican roots.\nSteady and resilient.",
+    eyebrow: "Old Harbour, Jamaica",
+    cta: "Our roots",
     href: "/shop",
     src: "https://picsum.photos/seed/dmg-brand-b/700/940",
-    alt: "We make the looks",
+    alt: "DMG portrait inspired by Old Harbour, Jamaica",
     textColor: "#3d2b00",
   },
   {
-    label: "YOU MAKE\nTHE MOMENT.",
-    desc: "The stage is set.\nAll eyes on you.",
-    eyebrow: "Featured styles",
-    cta: "Shop now",
+    label: "WORN IN\nFORT LAUDERDALE.",
+    desc: "South Florida ease.\nEveryday confidence.",
+    eyebrow: "Fort Lauderdale, Florida",
+    cta: "See the edit",
     href: "/shop",
     src: "https://picsum.photos/seed/dmg-brand-c/700/940",
-    alt: "You make the moment",
+    alt: "DMG editorial image for a Fort Lauderdale clothing brand",
     textColor: "#3d2b00",
   },
   {
-    label: "WE DESIGNED\nFOR YOU.",
-    desc: "Bold, comfortable,\nmade to be worn.",
-    eyebrow: "Made for you",
-    cta: "Shop now",
+    label: "MADE TO\nREPRESENT.",
+    desc: "Clean enough for every day.\nBold enough to mean something.",
+    eyebrow: "Purpose in every piece",
+    cta: "Wear it well",
     href: "/shop",
     src: "https://picsum.photos/seed/dmg-brand-d/700/940",
-    alt: "We designed for you",
+    alt: "DMG campaign image focused on purpose-driven apparel",
     textColor: "#db3c8a",
   },
 ];
@@ -131,7 +131,7 @@ export default function HomeBrand() {
             {/* Invisible spacer sized to the tallest two-line heading */}
             <div className="invisible pointer-events-none" aria-hidden>
               <p className="tx-xl whitespace-pre-line">
-                {"WE DESIGNED\nFOR YOU."}
+                {"WORN IN\nFORT LAUDERDALE."}
               </p>
             </div>
 

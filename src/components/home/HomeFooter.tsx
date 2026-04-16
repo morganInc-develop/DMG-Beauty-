@@ -65,7 +65,7 @@ export default function HomeFooter() {
             <div className="relative aspect-[3/4] overflow-hidden rounded-[var(--radius-md)] shadow-[0_2rem_6rem_rgb(0_0_0_/_0.12)]">
               <Image
                 src="https://picsum.photos/seed/dmg-footer-portrait/700/940"
-                alt="DMG Beauty lookbook portrait"
+                alt="DMG Christian apparel campaign portrait"
                 fill
                 className="object-cover"
                 sizes="(min-width: 961px) 42rem, 100vw"
@@ -79,14 +79,14 @@ export default function HomeFooter() {
               transition={{ type: "spring", stiffness: 250, damping: 20 }}
             >
               <span className="tx-l block uppercase tracking-[0.24em] text-foudre-paper/60">
-                New arrivals every season.
+                Fort Lauderdale by way of Old Harbour.
               </span>
               <h2 className="tx-md mt-2 whitespace-pre-line text-foudre-paper">
-                {"JOIN THE\nWAITLIST."}
+                {"WEAR FAITH.\nSTAY ROOTED."}
               </h2>
               <p className="tx-p mt-4 max-w-[28rem] text-foudre-paper/75">
-                Be first to know about the next drop, restocks, and limited
-                releases.
+                Get first word on faith-led releases, everyday essentials, and
+                the story we are building between South Florida and Jamaica.
               </p>
               <form
                 className="mt-6 flex flex-col gap-3"
@@ -108,11 +108,11 @@ export default function HomeFooter() {
                   type="submit"
                   className="inline-flex items-center justify-center rounded-[var(--radius-lg)] bg-foudre-green px-8 py-4 tx-p font-bold text-foudre-paper transition-colors hover:bg-foudre-green/90"
                 >
-                  Sign up →
+                  Join the community →
                 </button>
                 {submitted ? (
                   <p className="tx-l text-foudre-paper/70">
-                    You&apos;re on the list.
+                    You&apos;re in the community.
                   </p>
                 ) : null}
               </form>
@@ -136,7 +136,10 @@ export default function HomeFooter() {
         {/* Left: copyright + social icons */}
         <div className="flex flex-wrap items-center gap-4">
           <span className="tx-l text-foudre-green/60">
-            © {new Date().getFullYear()} DMG Beauty. All rights reserved.
+            © {new Date().getFullYear()} DMG. All rights reserved.
+          </span>
+          <span className="tx-l text-foudre-green/60">
+            Fort Lauderdale, Florida · Old Harbour, Jamaica
           </span>
           <a
             href="https://www.morgandev.studio"

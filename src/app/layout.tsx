@@ -22,12 +22,18 @@ const cormorantGaramond = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: {
-    default: "DMG Beauty — Fashion & Accessories",
-    template: "%s | DMG Beauty",
+    default: "DMG | Christian Apparel Rooted in Faith",
+    template: "%s | DMG",
   },
   description:
-    "Shop bonnets, clothes, and accessories from DMG Beauty. Bold style, built for you.",
-  keywords: ["DMG Beauty", "bonnets", "clothes", "accessories", "fashion"],
+    "Christian apparel rooted in faith, shaped by Old Harbour, Jamaica, and worn in Fort Lauderdale, Florida.",
+  keywords: [
+    "DMG",
+    "Christian apparel",
+    "Fort Lauderdale clothing brand",
+    "Old Harbour Jamaica",
+    "faith-based fashion",
+  ],
 };
 
 export default function RootLayout({

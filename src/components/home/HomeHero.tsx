@@ -63,27 +63,27 @@ function ChevronRightIcon() {
 
 const heroCards: HeroCard[] = [
   {
-    title: "SILK BONNET",
-    eyebrow: "Hair care essential",
+    title: "SATIN BONNET",
+    eyebrow: "Rooted routine",
     href: "/shop/bonnets/rose-satin",
     imageSrc: "https://picsum.photos/seed/dmg-hero-left/600/800",
-    alt: "DMG Beauty bonnet editorial",
+    alt: "DMG satin bonnet editorial for a Christian apparel campaign",
   },
   {
     title: "CLOUD HOODIE",
-    eyebrow: "Soft structure",
+    eyebrow: "Faith in motion",
     href: "/shop/clothes/cream-ribbed",
     videoSrc: "/videos/hero-loop.mp4",
     poster: "https://picsum.photos/seed/dmg-hero-center-poster/800/1000",
-    alt: "DMG Beauty featured motion look",
+    alt: "DMG hoodie editorial for a Fort Lauderdale Christian clothing brand",
     showBolt: true,
   },
   {
     title: "SATIN SCARF",
-    eyebrow: "Finish the look",
+    eyebrow: "Finish with purpose",
     href: "/shop/accessories/gold-hoops",
     imageSrc: "https://picsum.photos/seed/dmg-hero-right/600/800",
-    alt: "DMG Beauty accessories editorial",
+    alt: "DMG satin scarf editorial inspired by Old Harbour roots",
   },
 ];
 
@@ -329,7 +329,7 @@ export default function HomeHero() {
         {/* ── "WEAR YOUR STORY" — single row ── */}
         <div className="col-span-24 mt-8 desk:mt-10">
           <p className="hero-sub-copy tx-l uppercase tracking-[0.24em] text-foudre-green/38">
-            Bonnets · Clothes · Accessories
+            Fort Lauderdale · Old Harbour · Worn With Purpose
           </p>
           <p
             className="hero-sub-copy mt-4 text-foudre-pink desk:whitespace-nowrap"
@@ -341,7 +341,7 @@ export default function HomeHero() {
               fontSize: "clamp(5rem, 9.2vw, 13rem)",
             }}
           >
-            WEAR YOUR STORY
+            ROOTED IN FAITH
           </p>
         </div>
 
@@ -358,9 +358,9 @@ export default function HomeHero() {
               lineHeight: 1.35,
             }}
           >
-            Protective pieces with editorial energy —
+            Christian apparel with South Florida polish and Old Harbour roots -
             <br className="hidden desk:block" />
-            crafted for protection, polish, and presence at the same time.
+            made for conviction, comfort, and everyday presence.
           </p>
 
           {/* Carousel */}

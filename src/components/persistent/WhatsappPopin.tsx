@@ -9,7 +9,7 @@ type WhatsappPopinProps = {
   onClose: () => void;
 };
 
-const whatsappHref = "https://wa.me/33600000000?text=Hello%20DMG%20Beauty";
+const whatsappHref = "https://wa.me/33600000000?text=Hello%20DMG";
 
 export default function WhatsappPopin({ onClose }: WhatsappPopinProps) {
   const handleBackdropClick = (event: MouseEvent<HTMLDivElement>) => {
@@ -89,7 +89,7 @@ export default function WhatsappPopin({ onClose }: WhatsappPopinProps) {
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 350, damping: 20 }}
           >
-            Message DMG Beauty
+            Message DMG
           </motion.a>
         </motion.div>
       </motion.div>
